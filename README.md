@@ -12,8 +12,10 @@ f4cc2ccc8fe7   assignment   "python3 app.py"   28 hours ago   Up 28 hours   0.0.
 
 Command:
     docker logs f4cc2ccc8fe7
+
 Description:
     Provide logs of given container depicting the actions taken and current state
+
 Output:
 * Serving Flask app 'app'
  * Debug mode: off
@@ -26,8 +28,10 @@ WARNING: This is a development server. Do not use it in a production deployment.
 
  Command:
     docker inspect f4cc2ccc8fe7
+
 Description:
     Provides all the details/information on given image/container within the scope of Docker ranging from name to networking etc.
+
 Output: 
 [
     {
@@ -256,17 +260,23 @@ Output:
         }
     }
 ]
+
 ------------------------------------------------------------------------------------------------------------------------------
+
 
 Command:
     docker exec -it Assignment_1 sh 
+
 Description:
     Allows to run commands within Container by opening a new shell
 
+
 -----------------------------------------------------------------------------------------------------------------------------
+
 
 Command:
     docker attach Assignment_1
+
 Description:
     Allows to interact with running container by connecting to running container
 
@@ -274,8 +284,10 @@ Description:
 
 Command:
     docker stop f4cc2ccc8fe7
+
 Description:
     Stops a running container
+
 Output:
     It has stopped a previously running container
 
@@ -283,8 +295,10 @@ Output:
 
 Command:
     docker commit Assignment_1 new_image:latest
+
 Description:
     Allows to make changes in a running container and commit changes to a new image
+
 Output:
 REPOSITORY           TAG       IMAGE ID       CREATED         SIZE
 new_image            latest    e0433ec621ae   6 seconds ago   135MB
@@ -293,8 +307,10 @@ new_image            latest    e0433ec621ae   6 seconds ago   135MB
 
 Command:
     docker stats Assignment_1
+
 Description:
     It depicts the details of usage by the container/resource
+
 Output:
 CONTAINER ID   IMAGE        COMMAND            CREATED        STATUS         PORTS                                       NAMES
 f4cc2ccc8fe7   assignment   "python3 app.py"   29 hours ago   Up 3 seconds   0.0.0.0:8000->8000/tcp, :::8000->8000/tcp   Assignment_1
@@ -305,8 +321,10 @@ f4cc2ccc8fe7   Assignment_1   0.02%     18.12MiB / 15.23GiB   0.12%     6.74kB /
 
 Command:
     docker top Assignment_1
+
 Description:
     Provides the processes being run for the given container
+
 Output:UID                 PID                 PPID                C                   STIME               TTY                 TIME                CMD
 root                32712               32691               0                   00:12               ?                   00:00:00            python3 app.py
 
@@ -314,8 +332,10 @@ root                32712               32691               0                   
 
 Command:
     docker pause Assignment_1 
+
 Description:
     Pauses the container temporarily rather than terminating it like done in docker stop 
+
 Output:
 CONTAINER ID   IMAGE        COMMAND            CREATED        STATUS                  PORTS                                       NAMES
 f4cc2ccc8fe7   assignment   "python3 app.py"   29 hours ago   Up 8 minutes (Paused)   0.0.0.0:8000->8000/tcp, :::8000->8000/tcp   Assignment_1
@@ -324,9 +344,12 @@ f4cc2ccc8fe7   assignment   "python3 app.py"   29 hours ago   Up 8 minutes (Paus
 
 Command:
     docker unpause Assignment_1 
+
 Description:
     Unpauses a paused container 
+
 Output:
+
 CONTAINER ID   IMAGE        COMMAND            CREATED        STATUS          PORTS                                       NAMES
 f4cc2ccc8fe7   assignment   "python3 app.py"   29 hours ago   Up 10 minutes   0.0.0.0:8000->8000/tcp, :::8000->8000/tcp   Assignment_1
 
@@ -334,6 +357,7 @@ f4cc2ccc8fe7   assignment   "python3 app.py"   29 hours ago   Up 10 minutes   0.
 
 Command:
     docker start Assignment_1 
+
 Description:
     It starts an earlier stopped container 
 
@@ -341,8 +365,10 @@ Description:
 
 Command:
     docker rename Assignment_1 Assignment_rename_1 
+
 Description:
     It allows to change the name of a container 
+
 Output:
 CONTAINER ID   IMAGE        COMMAND            CREATED        STATUS          PORTS                                       NAMES
 f4cc2ccc8fe7   assignment   "python3 app.py"   29 hours ago   Up 14 minutes   0.0.0.0:8000->8000/tcp, :::8000->8000/tcp   Assignment_rename_1
@@ -351,8 +377,10 @@ f4cc2ccc8fe7   assignment   "python3 app.py"   29 hours ago   Up 14 minutes   0.
 
 Command:
     docker wait Assignment_rename_1 
+
 Description:
     Block until one or more containers stop, then print their exit codes
+
 Output:
 docker wait Assignment_rename_1
 137
@@ -361,17 +389,22 @@ docker wait Assignment_rename_1
 
 Command: 
     docker port f4cc2ccc8fe7
+
 Description:
         List port mappings or a specific mapping for the container
+
 Output:
+
     8000/tcp -> 0.0.0.0:8000
 8000/tcp -> [::]:8000
 
 --------------------------------------------------------------------------------------------------------------------------------------
 Command:
     docker restart f4cc2ccc8fe7
+
 Description:
     Restarts a running container 
+
 Output:
 f4cc2ccc8fe7   assignment   "python3 app.py"   29 hours ago   Up 3 seconds   0.0.0.0:8000->8000/tcp, :::8000->8000/tcp   Assignment_rename_1
 
@@ -379,6 +412,7 @@ f4cc2ccc8fe7   assignment   "python3 app.py"   29 hours ago   Up 3 seconds   0.0
 
 Command:
      docker update --cpu-shares 512 f4cc2ccc8fe7
+
 
 Description:
     The docker update command dynamically updates container configuration. You can use this command to prevent containers from consuming too many resources from their Docker host. 
