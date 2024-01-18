@@ -1,7 +1,9 @@
 Command:
     docker ps
+
 Description:
     Provides list of running containers
+
 Output:
     CONTAINER ID   IMAGE        COMMAND            CREATED        STATUS        PORTS                                       NAMES
 f4cc2ccc8fe7   assignment   "python3 app.py"   28 hours ago   Up 28 hours   0.0.0.0:8000->8000/tcp, :::8000->8000/tcp   Assignment_1
